@@ -6,14 +6,18 @@ import { connectDb } from './clients/db';
 import { connectCache } from './clients/cache';
 import postsRouter from './routes/posts';
 
-const main = async () => {
+const main = async () => 
+  
+  
+  
+  {
   logger.setLevel('DEBUG');
   dotenv.config({ path: '.env' });
 
   await connectDb();
   connectCache();
 
-  const app = express();
+        const app = express();
 
   // middlewares
   app.use(express.json());
