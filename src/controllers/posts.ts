@@ -13,7 +13,7 @@ export const createPost = asyncHandler(
         status: 400,
         success: false,
         message: 'Invalid request body',
-        data: error.details,
+        data: error.details
       });
       return;
     }
@@ -22,9 +22,9 @@ export const createPost = asyncHandler(
     responseBody(res, {
       status: 200,
       success: true,
-      message: 'Post created successfully',
+      message: 'Post created successfully'
     });
-  },
+  }
 );
 
 export const getPosts = asyncHandler(
@@ -33,9 +33,9 @@ export const getPosts = asyncHandler(
     responseBody(res, {
       status: 200,
       success: true,
-      data: posts,
+      data: posts
     });
-  },
+  }
 );
 
 export const getPostById = asyncHandler(
@@ -44,9 +44,9 @@ export const getPostById = asyncHandler(
     responseBody(res, {
       status: 200,
       success: true,
-      data: post,
+      data: post
     });
-  },
+  }
 );
 
 export const deletePostById = asyncHandler(
@@ -55,7 +55,7 @@ export const deletePostById = asyncHandler(
     responseBody(res, {
       status: 200,
       success: true,
-      message: 'Post deleted successfully',
+      message: 'Post deleted successfully'
     });
-  },
+  }
 );

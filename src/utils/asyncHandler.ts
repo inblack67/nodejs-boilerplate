@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express";
-import logger from "loglevel";
+import { Request, Response, NextFunction } from 'express';
+import logger from 'loglevel';
 
 export const asyncHandler = (fn: Function) => {
   return (req: Request, res: Response, next: NextFunction) => {
@@ -8,8 +8,8 @@ export const asyncHandler = (fn: Function) => {
         `Error in ${req.method} ${req.originalUrl}: ${err.message}`,
         {
           stack: err.stack,
-          requestBody: req.body,
-        },
+          requestBody: req.body
+        }
       );
       next(err);
     });

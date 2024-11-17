@@ -8,24 +8,24 @@ const PostSchema = new mongoose.Schema<IPost>({
     unique: true,
     trim: true,
     minlength: [3, 'title must be greater than 3 characters'],
-    maxlength: [50, 'title cannot be more than 50 chars'],
+    maxlength: [50, 'title cannot be more than 50 chars']
   },
 
   description: {
     type: String,
     trim: true,
     minlength: [100, 'description must be greater than 100 chars'],
-    maxlength: [500, 'description cannot be more than 500 chars'],
+    maxlength: [500, 'description cannot be more than 500 chars']
   },
   author: {
     type: String,
-    required: [true, 'author is required'],
+    required: [true, 'author is required']
   },
   hide: {
     type: Boolean,
     required: [true, 'hide is required'],
-    default: false,
-  },
+    default: false
+  }
 });
 
 export default mongoose.model('Post', PostSchema);
