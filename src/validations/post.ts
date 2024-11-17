@@ -1,5 +1,5 @@
-import Joi from 'joi';
-import { IPost } from '../interfaces/post';
+import Joi from "joi";
+import { IPost } from "../interfaces/post";
 
 export const createPostRequestSchema = Joi.object<IPost>({
   title: Joi.string().min(3).max(50).required(),
