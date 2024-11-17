@@ -8,8 +8,8 @@ export const asyncHandler = (fn: Function) => {
         `Error in ${req.method} ${req.originalUrl}: ${err.message}`,
         {
           stack: err.stack,
-          requestBody: req.body
-        }
+          requestBody: req.body,
+        },
       );
       next(err);
     });

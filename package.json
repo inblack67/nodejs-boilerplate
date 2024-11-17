@@ -14,13 +14,18 @@
     "prepare": "husky",
     "prettify": "prettier src/**/* --write --ignore-unknown"
   },
+  "lint-staged": {
+    "src/**/*": [
+      "prettier src/**/* --write --ignore-unknown",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/ioredis": "^5.0.0",
-    "@types/mongoose": "^5.11.97",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.9.0",
     "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
@@ -29,8 +34,10 @@
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "ioredis": "^5.4.1",
     "joi": "^17.13.3",
     "loglevel": "^1.9.2",
+    "mongoose": "^8.8.1",
     "morgan": "^1.10.0"
   }
 }

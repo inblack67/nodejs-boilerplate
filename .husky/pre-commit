@@ -1,1 +1,1 @@
-yarn prettify && yarn build
+npx lint-staged
