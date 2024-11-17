@@ -15,9 +15,8 @@
     "prettify": "prettier src/**/* --write --ignore-unknown"
   },
   "lint-staged": {
-    "src/**/*": [
-      "prettier src/**/* --write --ignore-unknown",
-      "git add"
+    "*": [
+      "prettier src/**/* --write --ignore-unknown"
     ]
   },
   "devDependencies": {
