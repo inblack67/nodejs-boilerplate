@@ -7,3 +7,7 @@ export const responseBody = <T>(
 ) => {
   res.status(details.status).json(details);
 };
+
+export const sum = (a: number, b: number) => {
+  return a + b;
+};

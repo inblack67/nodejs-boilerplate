@@ -9,24 +9,31 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "start": "node dist/index.js",
-    "dev": "nodemon dist/index.js",
+    "start": "yarn build && node dist/index.js",
+    "dev": "yarn build && nodemon dist/index.js",
     "prepare": "husky",
-    "prettify": "prettier src/**/* --write --ignore-unknown"
+    "prettify": "prettier src/**/* --write --ignore-unknown",
+    "test": "jest --collect-coverage"
   },
   "lint-staged": {
     "*": [
-      "prettier src/**/* --write --ignore-unknown"
+      "prettier src/**/* test/**/* --write --ignore-unknown"    
     ]
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.9.0",
+    "@types/supertest": "^6.0.2",
     "husky": "^9.1.6",
+    "jest": "^29.7.0",
     "lint-staged": "^15.2.10",
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.6.3"
   },
   "dependencies": {
