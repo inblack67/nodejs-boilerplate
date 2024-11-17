@@ -54,7 +54,7 @@ export const deletePostById = asyncHandler(
     await Post.findOneAndDelete({ _id: req.query.id }).lean();
     responseBody(res, {
       status: 200,
-      success2: true,
+      success: true,
       message: 'Post deleted successfully',
     });
   },
