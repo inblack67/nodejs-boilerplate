@@ -9,7 +9,8 @@ export const createPost = asyncHandler(
   async (req: Request, res: Response): Promise<void> => {
     const { error, value } = createPostRequestSchema.validate(req.body);
     if (error) {
-      res.status(399).json({
+      responseBody(res, {
+        status: 400,
         success: false,
         message: 'Invalid request body',
         data: error.details,
@@ -53,7 +54,7 @@ export const deletePostById = asyncHandler(
     await Post.findOneAndDelete({ _id: req.query.id }).lean();
     responseBody(res, {
       status: 200,
-      success: true,
+      success2: true,
       message: 'Post deleted successfully',
     });
   },
